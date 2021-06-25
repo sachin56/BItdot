@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Home</title>	
+	<title>Home</title>
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico">
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,400italic,700,700italic,900,900italic&amp;subset=latin,latin-ext" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Open%20Sans:300,400,400italic,600,600italic,700,700italic&amp;subset=latin,latin-ext" rel="stylesheet">
@@ -42,14 +42,14 @@
 						</div>
 						<div class="topbar-menu right-menu">
 							<ul>
-								
+
 								<li class="menu-item lang-menu menu-item-has-children parent">
 									<ul class="submenu lang" >
-										
+
 									</ul>
 								</li>
 								<li class="menu-item menu-item-has-children parent" >
-			
+
 								</li>
 								@if(Route::has('login'))
 								 @auth
@@ -61,13 +61,16 @@
 										<li class="menu-item" >
 											<a title="Dashboard" href="{{ route('admin.dashboard') }}">Dashboard</a>
 										</li>
+                                        <li class="menu-item" >
+                                            <a title="Dashboard" href="{{ route('admin.task') }}">Add Task</a>
+                                        </li>
 										<li class ="menu-item">
                                                     <a href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
                                                 </li>
                                                 <form id="logout-form" method="post" action="{{route('logout')}}">
                                                     @csrf
                                                 </form>
-										
+
 									</ul>
 								</li>
 								@else
@@ -135,7 +138,7 @@
 									</div>
 								</a>
 </div>
-						
+
 							<div class="wrap-icon-section show-up-after-1024">
 								<a href="#" class="mobile-navigation">
 									<span></span>
@@ -152,7 +155,7 @@
 					<div class="header-nav-section">
 						<div class="container">
 							<ul class="nav menu-nav clone-main-menu" id="mercado_haead_menu" data-menuname="Sale Info" >
-							
+
 							</ul>
 						</div>
 					</div>
@@ -190,7 +193,7 @@
 							<div class="wrap-left-info">
 								<h4 class="fc-name">Respect People's</h4>
 								<p class="fc-desc">Space</p>
-								
+
 							</div>
 
 						</li>
@@ -199,7 +202,7 @@
 							<div class="wrap-left-info">
 								<h4 class="fc-name">Respect People's</h4>
 								<p class="fc-desc"> Property</p>
-								
+
 							</div>
 
 						</li>
@@ -216,7 +219,7 @@
 							<div class="wrap-left-info">
 								<h4 class="fc-name">Do Small</h4>
 								<p class="fc-desc">Tasks Well</p>
-								
+
 							</div>
 
 						</li>
@@ -248,7 +251,7 @@
 											<li>
 												<i class="fa fa-envelope" aria-hidden="true"></i>
 												<p class="contact-txt">Email - ems@gmail.com</p>
-											</li>											
+											</li>
 										</ul>
 									</div>
 								</div>
@@ -298,7 +301,7 @@
 									<div class="item-content">
 										<div class="wrap-vertical-nav">
 											<ul>
-											
+
 											</ul>
 										</div>
 									</div>
@@ -345,9 +348,9 @@
 				</div>
 
 				 <div class="wrap-back-link">
-					
 
-			</div> 
+
+			</div>
 
 			<div class="coppy-right-box">
 				<div class="container">
@@ -357,7 +360,7 @@
 					<div class="coppy-right-item item-right">
 						<div class="wrap-nav horizontal-nav">
 							<ul>
-								<!-- <li class="menu-item"><a href="about-us.html" class="link-term">Mobile - 0770720813</a></li>								
+								<!-- <li class="menu-item"><a href="about-us.html" class="link-term">Mobile - 0770720813</a></li>
 								<li class="menu-item"><a href="https://www.bitdottechnologies.com" class="link-term">Visit Us On BitDot Technologies </a></li>
 								<li class="menu-item"><a href="https://www.instagram.com/bitdot_technologies/" class="link-term">Instagram</a></li>
 								<li class="menu-item"><a href="https://www.facebook.com/BitDot-Technologies-106190478173788" class="link-term">FaceBook</a></li>								 -->
@@ -369,7 +372,7 @@
 			</div>
 		</div>
 	</footer>
-	
+
 	<script src="{{asset('assets/js/jquery-1.12.4.minb8ff.js?ver=1.12.4')}}"></script>
 	<script src="{{asset('assets/js/jquery-ui-1.12.4.minb8ff.js?ver=1.12.4')}}"></script>
 	<script src="{{asset('assets/js/bootstrap.min.js')}}"></script>

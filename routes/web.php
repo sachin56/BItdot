@@ -36,14 +36,16 @@ Route::get('/productivity',\App\Http\Livewire\ProductivityComponent::class);
 //For User or Customer
 Route::middleware(['auth:sanctum','verified'])->group(function(){
     Route::get('/user/dashboard',\App\Http\Livewire\User\UserDashboardComponent::class)->name('user.dashboard');
-    
-    
+
+
     });
-    
-    
+
+
     //For the ADMIN
         Route::middleware(['auth:sanctum','verified','authadmin'])->group(function(){
         Route::get('/admin/dashboard',\App\Http\Livewire\Admin\AdminDashboardComponent::class)->name('admin.dashboard');
         Route::get('/admin/hr',\App\Http\Livewire\Admin\HrAdminComponent::class);
-    
+        Route::get('/admin/task/add',\App\Http\Livewire\Admin\AdminAddTaskComponent::class)->name('admin.addtask');
+        Route::get('/admin/task',\App\Http\Livewire\Admin\AdminTaskComponent::class)->name('admin.task');
+
     });
