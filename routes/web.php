@@ -37,6 +37,9 @@ Route::get('/productivity',\App\Http\Livewire\ProductivityComponent::class);
 //For User or Customer
 Route::middleware(['auth:sanctum','verified'])->group(function(){
     Route::get('/user/dashboard',\App\Http\Livewire\User\UserDashboardComponent::class)->name('user.dashboard');
+    Route::get('/user/employeeleave',\App\Http\Livewire\User\UserEmployeeLeaveComponent::class)->name('user.employeeleave');
+    Route::get('/user/employeeleavetable',\App\Http\Livewire\User\UserEmployeeLeavetableComponent::class)->name('user.employeeleavetable');
+    Route::get('/user/attendent',\App\Http\Livewire\User\UserAttendentComponent::class)->name('user.attendent');
 
 
     });
