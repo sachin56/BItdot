@@ -13,5 +13,6 @@ class DailyTaskComponent extends Component
     {
         $usertask=AddTask::paginate(10);
         return view('livewire.daily-task-component',['usertask'=>$usertask])->layout('layouts.base');
+
     }
 }

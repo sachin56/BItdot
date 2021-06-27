@@ -17,7 +17,8 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 Route::get('/',\App\Http\Livewire\HomeComponent::class);
-Route::get('/task',\App\Http\Livewire\DailyTaskComponent::class);
+Route::get('/task',\App\Http\Livewire\DailyTaskComponent::class)->name('index');
+Route::get('/task/edit',\App\Http\Livewire\DailytaskEditComponent::class)->name('task.update');
 Route::get('/hr',\App\Http\Livewire\HRComponent::class);
 Route::get('/productivity',\App\Http\Livewire\ProductivityComponent::class);
 
