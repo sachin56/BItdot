@@ -64,6 +64,9 @@
                                         <li class="menu-item" >
                                             <a title="Dashboard" href="{{ route('admin.task') }}">Add Task</a>
                                         </li>
+                                        <li class="menu-item" >
+                                            <a title="Dashboard" href="{{ route('admin.attet') }}">Attendent</a>
+                                        </li>
 										<li class ="menu-item">
                                                     <a href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
                                                 </li>
