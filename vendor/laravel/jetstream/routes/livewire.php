@@ -37,15 +37,4 @@ Route::group(['middleware' => config('jetstream.middleware', ['web'])], function
                         ->name('team-invitations.accept');
         }
     });
-    Route::group(['middleware' => ['auth', 'verified', 'authadmin']], function () {
-        // AdminProfile...
-        Route::get('/admin/profile', [UserProfileController::class, 'show'])
-                    ->name('profile.admin-show');
-
-        // Admin API...
-        if (Jetstream::hasApiFeatures()) {
-            Route::get('/admin/api-tokens', [ApiTokenController::class, 'index'])->name('api-tokens.admin-index');
-        }
-    });
-
 });

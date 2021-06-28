@@ -3,11 +3,17 @@
 namespace App\Http\Livewire;
 
 use Livewire\Component;
+use Livewire\WithPagination;
+use App\Models\Task;
 
 class ProductivityComponent extends Component
 {
+    use WithPagination;
+
     public function render()
     {
-        return view('livewire.productivity-component')->layout('layouts.base');
+        $tasks=Task::paginate(10);
+        return view('livewire.productivity-component',['tasks'=>$tasks])->layout('layouts.base');
+
     }
 }

@@ -37,7 +37,13 @@ Route::get('/productivity',\App\Http\Livewire\ProductivityComponent::class);
 Route::middleware(['auth:sanctum','verified'])->group(function(){
     Route::get('/user/dashboard',\App\Http\Livewire\User\UserDashboardComponent::class)->name('user.dashboard');
     
-    
+    Route::post ('saveTask', 'App\Http\Controllers\TaskController@store');
+    Route::get('/markascompleted/{id}','App\Http\Controllers\Taskcontroller@UpdateTaskAsCompleted');
+    Route::get('/markasnotcompleted/{id}','App\Http\Controllers\Taskcontroller@UpdateTaskAsNotCompleted');
+    Route::get('/deletetask/{id}','App\Http\Controllers\Taskcontroller@deletetask');
+    Route::get('/updatetask/{id}','App\Http\Controllers\Taskcontroller@updatetaskview');
+    Route::post('/updatetasks', 'App\Http\Controllers\Taskcontroller@updatetask');
+
     });
     
     

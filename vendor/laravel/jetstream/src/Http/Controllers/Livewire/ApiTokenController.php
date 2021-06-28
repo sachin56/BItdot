@@ -15,14 +15,6 @@ class ApiTokenController extends Controller
      */
     public function index(Request $request)
     {
-
-        if(session('utype') === 'ADM'){
-            return view('api.admin-index', [
-                'request' => $request,
-                'user' => $request->user(),
-            ]);
-        }
-
         return view('api.index', [
             'request' => $request,
             'user' => $request->user(),
