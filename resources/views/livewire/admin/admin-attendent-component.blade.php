@@ -14,7 +14,7 @@
                     <div class="panel-heading">
                         <div class="row">
                             <div class="col-md-6">
-                                Attendent
+                               Attendent
                             </div>
                         </div>
                     </div>
@@ -23,17 +23,15 @@
                             <thead>
                             <tr>
                                 <th>Employee Id</th>
-                                <th>Description</th>
-                                <th>Status</th>
+                                <th>Name</th>
 
                             </tr>
                             </thead>
                             <tbody>
-                            @foreach($hr as $task)
+                            @foreach($leave as $task)
                                 <tr>
-                                    <td>{{$task->employee_id}}</td>
-                                    <td>{{$task->description}}</td>
-                                    <td>{{$task->status}}</td>
+                                    <td>{{$task->emp_id}}</td>
+                                    <td>{{$task->name}}</td>
                                     <td></td>
                                     {{--                                        <a href="{{route('admin.editproducts',['product_slug'=>$product->slug])}}"><i class="fa fa-edit fa-2x text-info"></i> </a>--}}
                                     {{--                                        <a href="#" style="margin-left: 10px;" wire:click.prevent="deleteProduct({{$product->id}})"><i class="fa fa-times fa-2x text-danger"></i> </a>--}}
@@ -43,13 +41,12 @@
                             @endforeach
                             </tbody>
                         </table>
-                        {{$hr->links()}}
+                        {{$leave->links()}}
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
 
 

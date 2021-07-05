@@ -14,42 +14,48 @@
                     <div class="panel-heading">
                         <div class="row">
                             <div class="col-md-6">
-                                Attendent
+                                All Task
+                            </div>
+
+
+                            <div class="col-md-6">
+                                <a href="{{route('admin.addtask')}}" class="btn btn-success pull-right">Add New</a>
                             </div>
                         </div>
                     </div>
                     <div class="panel-body">
+                        @if(Session::has('message'))
+                            <div class="alert alert-success" role="alert">{{Session::get('message')}}</div>
+                        @endif
                         <table class="table table-striped">
                             <thead>
                             <tr>
-                                <th>Employee Id</th>
-                                <th>Description</th>
+                                <th>Title</th>
+                                <th>description</th>
                                 <th>Status</th>
 
                             </tr>
                             </thead>
                             <tbody>
-                            @foreach($hr as $task)
+                            @foreach($addtask as $task)
                                 <tr>
-                                    <td>{{$task->employee_id}}</td>
+                                    <td>{{$task->title}}</td>
                                     <td>{{$task->description}}</td>
                                     <td>{{$task->status}}</td>
                                     <td></td>
-                                    {{--                                        <a href="{{route('admin.editproducts',['product_slug'=>$product->slug])}}"><i class="fa fa-edit fa-2x text-info"></i> </a>--}}
-                                    {{--                                        <a href="#" style="margin-left: 10px;" wire:click.prevent="deleteProduct({{$product->id}})"><i class="fa fa-times fa-2x text-danger"></i> </a>--}}
-                                    {{--                                    </td>--}}
+{{--                                        <a href="{{route('admin.editproducts',['product_slug'=>$product->slug])}}"><i class="fa fa-edit fa-2x text-info"></i> </a>--}}
+{{--                                        <a href="#" style="margin-left: 10px;" wire:click.prevent="deleteProduct({{$product->id}})"><i class="fa fa-times fa-2x text-danger"></i> </a>--}}
+{{--                                    </td>--}}
 
                                 </tr>
                             @endforeach
                             </tbody>
                         </table>
-                        {{$hr->links()}}
+                        {{$addtask->links()}}
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
-
 
