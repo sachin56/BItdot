@@ -14,4 +14,8 @@ class AdminAttendentComponent extends Component
         $leave=Attendent::paginate(10);
         return view('livewire.admin.admin-attendent-component',['leave'=>$leave])->layout('layouts.base');
     }
+    public function getdates()
+    {
+        return array('created_at','updated_at','deleted_at','taken');
+    }
 }

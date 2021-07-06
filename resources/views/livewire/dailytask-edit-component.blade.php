@@ -1,63 +1,58 @@
+<div>
+    <div class="container" style="padding: 30px 0;">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-md-6">
+                                Edit Product
+                            </div>
+                            <div class="col-md-6">
 
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        @if(Session::has('message'))
+                            <div class="alert alert-success" role="alert">{{Session::get('message')}}</div>
+                        @endif
+                        <form class="form-horizontal" enctype="multipart/form-data" wire:submit.prevent="update">
 
-    <title>Laravel</title>
-    {{-- Fonts --}}
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">Title</label>
+                                <div class="col-md-4">
+                                    <input type="text" placeholder="Product slug" class="form-control input-md" wire:model="title" readonly/>
+                                </div>
+                            </div>
 
-    {{-- Bootstrap CSS --}}
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-</head>
-<body class="antialiased">
-<div class="container p-5">
-@foreach($tasks as $task)
-    <div>
-        <div class="float-start">
-            <h4 class="pb-3">Edit Task <span class="badge bg-info">{{ $task->title }}</span></h4>
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">Description</label>
+                                <div class="col-md-4">
+                                    <textarea class="form-control" placeholder="Description"wire:model="description" readonly></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">Status</label>
+                                <div class="col-md-4">
+                                    <select class="form-control" wire:model="status">
+                                        <option value="To Do">ToDo</option>
+                                        <option value="Done">Done</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-md-4 control-label"></label>
+                                <div class="col-md-4">
+                                    <button type="submit" class="btn btn-primary">Update</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="float-end">
-            <a href="{{ route('index') }}" class="btn btn-info">
-                <i class="fa fa-arrow-left"></i> All Task
-            </a>
-        </div>
-        <div class="clearfix"></div>
     </div>
-
-    <div class="card card-body bg-light p-4">
-        <form action="{{ route('task.update', $task->id) }}" method="POST">
-            @csrf
-
-
-            <div class="mb-3">
-                <label for="title" class="form-label">Title</label>
-                <input type="text" class="form-control" id="title" name="title" value="{{ $task->title }}">
-            </div>
-            <div class="mb-3">
-                <label for="description" class="form-label">Description</label>
-                <textarea type="text" class="form-control" id="description" name="description" rows="5">{{ $task->description }}</textarea>
-            </div>
-            <div class="mb-3">
-                <label for="description" class="form-label">Status</label>
-                <select name="status" id="status" class="form-control" wire:model="status">
-                    <option value="To Do">To Do</option>
-                    <option value="Done">Done</option>
-                </select>
-            </div>
-
-            <a href="{{ route('index') }}" class="btn btn-secondary mr-2"><i class="fa fa-arrow-left"></i> Cancel</a>
-
-            <button type="submit" class="btn btn-success">
-                <i class="fa fa-check"></i>
-                Save
-            </button>
-        </form>
-    </div>
-@endforeach
 </div>
-</body>
-
-
 

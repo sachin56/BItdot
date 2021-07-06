@@ -59,7 +59,7 @@
                         <small>Last Updated - {{ $task->updated_at->diffForHumans() }} </small>
                     </div>
                     <div class="float-end">
-                        <a href="{{ route('task.update', $task->id) }}" class="btn btn-success">
+                        <a href="{{ route('task.update',['task_id'=>$task->id]) }}" class="btn btn-success">
                             <i class="fa fa-edit"></i>
                         </a>
 

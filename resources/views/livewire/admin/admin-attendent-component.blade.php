@@ -24,6 +24,7 @@
                             <tr>
                                 <th>Employee Id</th>
                                 <th>Name</th>
+                                <th>Time</th>
 
                             </tr>
                             </thead>
@@ -32,7 +33,10 @@
                                 <tr>
                                     <td>{{$task->emp_id}}</td>
                                     <td>{{$task->name}}</td>
-                                    <td></td>
+                                    <td>
+                                        <small>Last Attend - {{ $task->created_at}} </small>
+{{--                                        {{$task->created_at}}--}}
+                                    </td>
                                     {{--                                        <a href="{{route('admin.editproducts',['product_slug'=>$product->slug])}}"><i class="fa fa-edit fa-2x text-info"></i> </a>--}}
                                     {{--                                        <a href="#" style="margin-left: 10px;" wire:click.prevent="deleteProduct({{$product->id}})"><i class="fa fa-times fa-2x text-danger"></i> </a>--}}
                                     {{--                                    </td>--}}

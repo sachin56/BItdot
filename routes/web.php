@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 // });
 Route::get('/',\App\Http\Livewire\HomeComponent::class);
 Route::get('/task',\App\Http\Livewire\DailyTaskComponent::class)->name('index');
-Route::get('/task/edit',\App\Http\Livewire\DailytaskEditComponent::class)->name('task.update');
+Route::get('/task/edit/{task_id}',\App\Http\Livewire\DailytaskEditComponent::class)->name('task.update');
 Route::get('/hr',\App\Http\Livewire\HRComponent::class);
 Route::get('/productivity',\App\Http\Livewire\ProductivityComponent::class);
 
@@ -38,7 +38,7 @@ Route::get('/productivity',\App\Http\Livewire\ProductivityComponent::class);
 Route::middleware(['auth:sanctum','verified'])->group(function(){
     Route::get('/user/dashboard',\App\Http\Livewire\User\UserDashboardComponent::class)->name('user.dashboard');
 
-    
+
     Route::post ('saveTask', 'App\Http\Controllers\TaskController@store');
     Route::get('/markascompleted/{id}','App\Http\Controllers\Taskcontroller@UpdateTaskAsCompleted');
     Route::get('/markasnotcompleted/{id}','App\Http\Controllers\Taskcontroller@UpdateTaskAsNotCompleted');
