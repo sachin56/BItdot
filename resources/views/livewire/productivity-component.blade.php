@@ -5,6 +5,9 @@
  <div class="container">
     <div class="text-center">
         <h1>Productivity Management</h1>
+        <div>
+        <a href="{{route('taskdownload')}}" class="btn btn-success pull-right">Download</a>
+        </div>
             <div class="row">
                 <div class="col-md-12">
 

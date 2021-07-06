@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Exports\AttendentExport;
+use App\Exports\TaskExport;
 
 
 /*
@@ -27,7 +28,9 @@ Route::get('/productivity',\App\Http\Livewire\ProductivityComponent::class);
 Route::get('/download',function(){
     return Excel::download(new AttendentExport, 'attendent.xlsx');
 })->name('download');
-
+Route::get('/Taskdownload',function(){
+    return Excel::download(new TaskExport, 'task.xlsx');
+})->name('taskdownload');
 
 
 // Route::middleware(['auth:sanctum', 'verified'])->get('/user/dashboard', function () {
