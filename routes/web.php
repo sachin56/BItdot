@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Exports\AttendentExport;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +24,9 @@ Route::get('/task',\App\Http\Livewire\DailyTaskComponent::class)->name('index');
 Route::get('/task/edit/{task_id}',\App\Http\Livewire\DailytaskEditComponent::class)->name('task.update');
 Route::get('/hr',\App\Http\Livewire\HRComponent::class);
 Route::get('/productivity',\App\Http\Livewire\ProductivityComponent::class);
+Route::get('/download',function(){
+    return Excel::download(new AttendentExport, 'attendent.xlsx');
+})->name('download');
 
 
 

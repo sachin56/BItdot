@@ -18,4 +18,5 @@ class AdminAttendentComponent extends Component
     {
         return array('created_at','updated_at','deleted_at','taken');
     }
+    
 }

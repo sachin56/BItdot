@@ -16,6 +16,9 @@
                             <div class="col-md-6">
                                Attendent
                             </div>
+                            <div>
+                            <a href="{{route('download')}}" class="btn btn-success pull-right">Download</a>
+                            </div>
                         </div>
                     </div>
                     <div class="panel-body">
