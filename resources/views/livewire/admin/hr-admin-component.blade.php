@@ -34,7 +34,9 @@
                                     <td>{{$task->employee_id}}</td>
                                     <td>{{$task->description}}</td>
                                     <td>{{$task->status}}</td>
-                                    <td></td>
+                                    <td>
+                                        <a href="{{route('admin.editleave',['leave_id'=>$task->id])}}"><i class="fa fa-edit fa-2x text-info"></i> </a>
+                                    </td>
                                     {{--                                        <a href="{{route('admin.editproducts',['product_slug'=>$product->slug])}}"><i class="fa fa-edit fa-2x text-info"></i> </a>--}}
                                     {{--                                        <a href="#" style="margin-left: 10px;" wire:click.prevent="deleteProduct({{$product->id}})"><i class="fa fa-times fa-2x text-danger"></i> </a>--}}
                                     {{--                                    </td>--}}

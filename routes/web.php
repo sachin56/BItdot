@@ -70,6 +70,7 @@ Route::middleware(['auth:sanctum','verified'])->group(function(){
         Route::get('/admin/task/add',\App\Http\Livewire\Admin\AdminAddTaskComponent::class)->name('admin.addtask');
         Route::get('/admin/task',\App\Http\Livewire\Admin\AdminTaskComponent::class)->name('admin.task');
         Route::get('/admin/attendent',\App\Http\Livewire\Admin\AdminAttendentComponent::class)->name('admin.attet');
+        Route::get('/admin/attendentedit/{leave_id}',\App\Http\Livewire\Admin\AdminleaveEditComponent::class)->name('admin.editleave');
 
 
     });
