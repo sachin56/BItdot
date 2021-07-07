@@ -13,7 +13,7 @@ class ProductivityComponent extends Component
     public function render()
     {
         $tasks=Task::paginate(10);
-        return view('livewire.productivity-component',['tasks'=>$tasks])->layout('layouts.base');
+        return view('livewire.productivity-component',['tasks'=>$tasks])->layout('layouts.user');
 
     }
 }

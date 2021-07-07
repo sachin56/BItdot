@@ -162,16 +162,20 @@
 						<div class="container">
 							<ul class="nav primary clone-main-menu" id="mercado_main" data-menuname="Main menu" >
 								<li class="menu-item home-icon">
-									<a href="/" class="link-term mercado-item-title"><i class="fa fa-home" aria-hidden="true"></i></a>
+									<a href="/user/dashboard" class="link-term mercado-item-title"><i class="fa fa-home" aria-hidden="true"></i></a>
 								</li>
 								<li class="menu-item">
 									<a href="/task" class="link-term mercado-item-title">Daily Task</a>
 								</li>
 								<li class="menu-item">
-									<a href="/hr" class="link-term mercado-item-title">HR</a>
+									<a href="/user/attendent" class="link-term mercado-item-title">HR</a>
 								</li>
 								<li class="menu-item">
 									<a href="/productivity" class="link-term mercado-item-title">Productivity</a>
+								</li>
+								
+								<li class="menu-item">
+									<a href="/user/attendent" class="link-term mercado-item-title">EMPLOYEE LEAVE</a>
 								</li>
 							</ul>
 						</div>

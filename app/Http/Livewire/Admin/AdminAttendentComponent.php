@@ -12,7 +12,7 @@ class AdminAttendentComponent extends Component
     public function render()
     {
         $leave=Attendent::paginate(10);
-        return view('livewire.admin.admin-attendent-component',['leave'=>$leave])->layout('layouts.base');
+        return view('livewire.admin.admin-attendent-component',['leave'=>$leave])->layout('layouts.admin');
     }
     public function getdates()
     {

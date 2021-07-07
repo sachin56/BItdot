@@ -35,6 +35,6 @@ class AdminleaveEditComponent extends Component
     }
     public function render()
     {
-        return view('livewire.admin.adminleave-edit-component')->layout('layouts.base');
+        return view('livewire.admin.adminleave-edit-component')->layout('layouts.admin');
     }
 }

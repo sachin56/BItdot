@@ -40,7 +40,7 @@ class DailytaskEditComponent extends Component
     public function render()
     {
 
-        return view('livewire.dailytask-edit-component')->layout('layouts.base');
+        return view('livewire.dailytask-edit-component')->layout('layouts.user');
     }
 
 
