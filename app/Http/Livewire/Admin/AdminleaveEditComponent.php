@@ -3,6 +3,7 @@
 namespace App\Http\Livewire\Admin;
 
 use App\Models\EmployeeLeave;
+use Illuminate\Support\Str;
 use Livewire\Component;
 use Livewire\WithPagination;
 
@@ -24,6 +25,10 @@ class AdminleaveEditComponent extends Component
         $this->status=$leave->status;
         $this->idl=$leave->id;
     }
+    public function generateSlug()
+    {
+        $this->id=Str::slug($this->employee_id,'-');
+    }
     public function update()
     {
         $leave=EmployeeLeave::find($this->idl);
@@ -35,6 +40,7 @@ class AdminleaveEditComponent extends Component
     }
     public function render()
     {
-        return view('livewire.admin.adminleave-edit-component')->layout('layouts.base');
+
+        return view('livewire.admin.adminleave-edit-component')->layout('layouts.admin');
     }
 }

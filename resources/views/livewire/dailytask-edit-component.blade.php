@@ -6,7 +6,7 @@
                     <div class="panel-heading">
                         <div class="row">
                             <div class="col-md-6">
-                                Edit Product
+                                Edit Task
                             </div>
                             <div class="col-md-6">
 

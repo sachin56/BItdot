@@ -6,7 +6,7 @@
                     <div class="panel-heading">
                         <div class="row">
                             <div class="col-md-6">
-                                Edit Product
+                                Edit EmployeeLeave
                             </div>
                             <div class="col-md-6">
 
@@ -22,7 +22,7 @@
                             <div class="form-group">
                                 <label class="col-md-4 control-label">Title</label>
                                 <div class="col-md-4">
-                                    <input type="text" placeholder="Product slug" class="form-control input-md" wire:model="employee_id" readonly/>
+                                    <input type="text" placeholder="ID" class="form-control input-md" wire:model="employee_id" wire:keyup="generateSlug" readonly/>
                                 </div>
                             </div>
 
@@ -35,7 +35,7 @@
                             <div class="form-group">
                                 <label class="col-md-4 control-label">Status</label>
                                 <div class="col-md-4">
-                                    <select class="form-control" wire:model="status">
+                                    <select class="form-control"wire:model="status">
                                         <option value="Approved">Approved</option>
                                         <option value="Not Approved">Not Approved</option>
                                     </select>
