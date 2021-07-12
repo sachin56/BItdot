@@ -173,6 +173,12 @@
 								<li class="menu-item">
 									<a href="/productivity" class="link-term mercado-item-title">Productivity</a>
 								</li>
+                                <li class="menu-item">
+                                    <a href="{{route('user.employeeleavetable')}}" class="link-term mercado-item-title">Apply Leave</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="{{route('user.attendent')}}" class="link-term mercado-item-title">Employee Attendent</a>
+                                </li>
 							</ul>
 						</div>
 					</div>

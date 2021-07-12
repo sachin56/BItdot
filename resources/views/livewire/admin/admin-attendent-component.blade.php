@@ -12,13 +12,15 @@
             <div class="col-md-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
+                        <div>
+                            <a href="{{route('download')}}" class="btn btn-success pull-right">Download Form</a>
+                        </div>
                         <div class="row">
+
                             <div class="col-md-6">
                                Attendent
                             </div>
-                            <div>
-                            <a href="{{route('download')}}" class="btn btn-success pull-right">Download</a>
-                            </div>
+
                         </div>
                     </div>
                     <div class="panel-body">

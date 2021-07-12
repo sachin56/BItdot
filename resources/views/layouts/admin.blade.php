@@ -175,6 +175,12 @@
 								<li class="menu-item">
 									<a href="/admin/hr" class="link-term mercado-item-title">HR</a>
 								</li>
+                                <li class="menu-item">
+                                    <a href="{{ route('admin.task') }}" class="link-term mercado-item-title">Add Task</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="{{ route('admin.attet') }}" class="link-term mercado-item-title">Attendent</a>
+                                </li>
 							</ul>
 						</div>
 					</div>
