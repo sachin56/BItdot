@@ -12,6 +12,6 @@ class UserEmployeeLeavetableComponent extends Component
     public function render()
     {
         $leavetable=EmployeeLeave::paginate(10);
-        return view('livewire.user.user-employee-leavetable-component',['leavetable'=>$leavetable])->layout('layouts.base');
+        return view('livewire.user.user-employee-leavetable-component',['leavetable'=>$leavetable])->layout('layouts.user');
     }
 }

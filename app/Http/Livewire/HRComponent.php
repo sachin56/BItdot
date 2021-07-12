@@ -8,6 +8,6 @@ class HRComponent extends Component
 {
     public function render()
     {
-        return view('livewire.h-r-component')->layout('layouts.base');
+        return view('livewire.h-r-component')->layout('layouts.user');
     }
 }

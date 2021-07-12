@@ -30,6 +30,6 @@ class UserEmployeeLeaveComponent extends Component
     public function render()
     {
 
-        return view('livewire.user.user-employee-leave-component')->layout('layouts.base');
+        return view('livewire.user.user-employee-leave-component')->layout('layouts.user');
     }
 }

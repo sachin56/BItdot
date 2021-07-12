@@ -13,7 +13,7 @@ class UserUpdateComponent extends Component
     public function render()
     {
         $updatetask=Task::paginate(10);
-        return view('livewire.user-update-component', ['updatetask' => $data])->layout('layouts.User');
+        return view('livewire.user-update-component', ['updatetask' => $data])->layout('layouts.user');
 
     }
 
